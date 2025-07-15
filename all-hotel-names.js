@@ -30,6 +30,9 @@ const hotelNames = [
     "The Naka Hotels Phuket",
     "The Nature Phuket",
     "Valia Hotel Bangkok",
+    "Adam Krabi",
+    "Panan Krabi Resort",
+    "Sea Seeker Krabi Resort",
 ];
 
 
