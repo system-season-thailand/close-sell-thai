@@ -92,7 +92,7 @@ let hotelData = [];
 // --- Load hotel data and render table (replaces hotelSelector change event) ---
 async function loadHotelData(hotelName) {
     if (!hotelName) return;
-    const { data, error } = await supabase.from(hotelName).select('*');
+    const { data, error } = await supabase.from(hotelName).select('*').order('id');
     if (error) return alert('Failed to load hotel data');
     hotelData = data;
 
