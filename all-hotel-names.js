@@ -33,6 +33,7 @@ const hotelNames = [
     "Adam Krabi",
     "Panan Krabi Resort",
     "Sea Seeker Krabi Resort",
+    "Ascott Thonglor Bangkok",
 ];
 
 
