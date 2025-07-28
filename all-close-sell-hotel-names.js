@@ -21,7 +21,7 @@ const closeSellHotelNames = [
     "Namaka Resort Kamala",
     "Nysa Hotel Bangkok",
     "Oceanfront Beach Resort Phuket",
-    "Phuket Emerald Beach",
+    "Phuket Emerald Beach Resort",
     "Saii Laguna Phuket",
     "Siam Kempinski Bangkok",
     "Sinae Phuket Luxury",
