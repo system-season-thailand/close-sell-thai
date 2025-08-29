@@ -36,6 +36,7 @@ const closeSellHotelNames = [
     "Ascott Thonglor Bangkok",
     "Ascott Embassy Bangkok",
     "Tribe Living Bangkok",
+    "Ozo Phuket",
 ];
 
 
