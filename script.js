@@ -89,6 +89,45 @@ function getPreviousMonthNames(count = 3) {
     return previousMonths;
 }
 
+// Clear previous N months for all rows in the selected hotel table
+async function clearPreviousMonthsInDb(hotelName, count = 3) {
+    try {
+        const monthsToClear = getPreviousMonthNames(count);
+        if (!monthsToClear.length) return;
+
+        // Prepare update payload with months set to empty strings
+        const updatePayload = monthsToClear.reduce((acc, m) => { acc[m] = ''; return acc; }, {});
+
+        // Update each row individually using its id (avoids PostgREST filter requirements)
+        const updatePromises = (hotelData || []).map(row => {
+            if (!row || typeof row.id === 'undefined') return Promise.resolve(null);
+            return supabase
+                .from(hotelName)
+                .update(updatePayload)
+                .eq('id', row.id);
+        });
+        const results = await Promise.all(updatePromises);
+        const anyError = results.find(r => r && r.error);
+        if (anyError) {
+            console.error('Failed clearing previous months in Supabase:', anyError.error || anyError);
+            return;
+        }
+
+        // Also update local hotelData to reflect cleared months
+        hotelData = hotelData.map(row => {
+            const updated = { ...row };
+            monthsToClear.forEach(m => { updated[m] = ''; });
+            return updated;
+        });
+    } catch (e) {
+        console.error('Unexpected error clearing previous months:', e);
+    }
+}
+
+
+
+
+
 const hotelSelector = document.getElementById('hotelSelector');
 const monthTabs = document.getElementById('monthTabs');
 const tableContainer = document.getElementById('tableContainer');
@@ -107,6 +146,11 @@ async function loadHotelData(hotelName) {
     const { data, error } = await supabase.from(hotelName).select('*').order('id');
     if (error) return alert('Failed to load hotel data');
     hotelData = data;
+
+    
+    // Ensure previous 3 months are cleared in DB and locally
+    await clearPreviousMonthsInDb(hotelName);
+
 
     // Update the hotel name title
     const hotelNameTitleElement = document.getElementById('currentHotelNameTitle');
@@ -175,7 +219,7 @@ function renderMonthTable(month) {
         html += `</tr>`;
     });
 
-    
+
     html += `</tbody></table>`;
     tableContainer.innerHTML = html;
 
