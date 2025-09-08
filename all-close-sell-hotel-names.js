@@ -39,6 +39,7 @@ const closeSellHotelNames = [
     "Ozo Phuket",
     "The Shore Katathani Phuket",
     "Avista Hideaway Phuket Patong",
+    "Avista Grande Phuket Karon",
 ];
 
 
