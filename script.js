@@ -70,13 +70,6 @@ let originalStates = new Map(); // store each cell’s original class
 
 
 
-
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const daysInMonth = {
-    January: 31, February: 29, March: 31, April: 30, May: 31, June: 30,
-    July: 31, August: 31, September: 30, October: 31, November: 30, December: 31
-};
-
 // Return an array of the previous N month names relative to today (excludes current month)
 function getPreviousMonthNames(count = 3) {
     const now = new Date();
@@ -89,40 +82,76 @@ function getPreviousMonthNames(count = 3) {
     return previousMonths;
 }
 
-// Clear previous N months for all rows in the selected hotel table
-async function clearPreviousMonthsInDb(hotelName, count = 3) {
+
+
+// Clear previous N months for a specific hotel by fetching IDs directly from the DB
+async function clearPreviousMonthsForHotel(hotelName, count = 3) {
     try {
         const monthsToClear = getPreviousMonthNames(count);
         if (!monthsToClear.length) return;
 
-        // Prepare update payload with months set to empty strings
         const updatePayload = monthsToClear.reduce((acc, m) => { acc[m] = ''; return acc; }, {});
 
-        // Update each row individually using its id (avoids PostgREST filter requirements)
-        const updatePromises = (hotelData || []).map(row => {
-            if (!row || typeof row.id === 'undefined') return Promise.resolve(null);
-            return supabase
-                .from(hotelName)
-                .update(updatePayload)
-                .eq('id', row.id);
-        });
-        const results = await Promise.all(updatePromises);
-        const anyError = results.find(r => r && r.error);
-        if (anyError) {
-            console.error('Failed clearing previous months in Supabase:', anyError.error || anyError);
+        const { data: rows, error } = await supabase.from(hotelName).select('id');
+        if (error) {
+            console.error('Failed to fetch IDs for hotel', hotelName, error);
             return;
         }
 
-        // Also update local hotelData to reflect cleared months
-        hotelData = hotelData.map(row => {
-            const updated = { ...row };
-            monthsToClear.forEach(m => { updated[m] = ''; });
-            return updated;
-        });
+        const results = await Promise.all((rows || []).map(r =>
+            supabase
+                .from(hotelName)
+                .update(updatePayload)
+                .eq('id', r.id)
+        ));
+
+        const anyError = results.find(r => r && r.error);
+        if (anyError) {
+            console.error('Failed clearing previous months for', hotelName, anyError.error || anyError);
+        }
     } catch (e) {
-        console.error('Unexpected error clearing previous months:', e);
+        console.error('Unexpected error clearing previous months for', hotelName, e);
     }
 }
+
+// Clear previous N months for all hotels listed in closeSellHotelNames
+async function clearPreviousMonthsForAllHotels(count = 3) {
+    if (typeof closeSellHotelNames === 'undefined' || !Array.isArray(closeSellHotelNames)) return;
+    for (const hotelName of closeSellHotelNames) {
+        await clearPreviousMonthsForHotel(hotelName, count);
+    }
+}
+
+
+
+
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const daysInMonth = {
+    January: 31, February: 29, March: 31, April: 30, May: 31, June: 30,
+    July: 31, August: 31, September: 30, October: 31, November: 30, December: 31
+};
+
+// Wire Clear Previous 3 Months button
+document.addEventListener('DOMContentLoaded', () => {
+    const clearBtn = document.getElementById('clearPrevBtn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', async () => {
+            const proceed = confirm('Clear previous 3 months for all hotels?');
+            if (!proceed) return;
+            clearBtn.disabled = true;
+            try {
+                await clearPreviousMonthsForAllHotels(3);
+                alert('Cleared previous 3 months for all hotels.');
+            } catch (e) {
+                console.error(e);
+                alert('Failed to clear. Please check console for details.');
+            } finally {
+                clearBtn.disabled = false;
+            }
+        });
+    }
+});
 
 
 
@@ -147,9 +176,6 @@ async function loadHotelData(hotelName) {
     if (error) return alert('Failed to load hotel data');
     hotelData = data;
 
-    
-    // Ensure previous 3 months are cleared in DB and locally
-    await clearPreviousMonthsInDb(hotelName);
 
 
     // Update the hotel name title
