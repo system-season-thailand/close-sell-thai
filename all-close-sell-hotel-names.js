@@ -41,6 +41,8 @@ const closeSellHotelNames = [
     "Avista Hideaway Phuket Patong",
     "Avista Grande Phuket Karon",
     "Anantara Mai Khao Phuket Villas",
+    "Panwaburi Beachfront Resort Phuket",
+    "Centara Karon Resort Phuket",
 ];
 
 
