@@ -24,7 +24,7 @@ const closeSellHotelNames = [
     "Phuket Emerald Beach Resort",
     "Saii Laguna Phuket",
     "Siam Kempinski Bangkok",
-    "Sinae Phuket Luxury",
+    "Sinae Phuket Luxury Hotel",
     "Sri Panwa Phuket",
     "The Nai Harn Phuket",
     "The Naka Hotels Phuket",
