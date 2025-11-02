@@ -43,6 +43,17 @@ const closeSellHotelNames = [
     "Anantara Mai Khao Phuket Villas",
     "Panwaburi Beachfront Resort Phuket",
     "Centara Karon Resort Phuket",
+
+
+
+    "Sugar Marina Hotel CLIFFHANGER Krabi",
+    "Sugar Marina Art Karon Phuket",
+    "Marina Express Fisherman Aonang Krabi",
+    "Sugar Marina Fashion Phuket",
+    "Marina Gallery KACHA Phuket",
+    "Marina MUAYTHAI Ta-iad Phuket",
+    "Sugar Marina POP Phuket",
+    "Sugar Marina SURF Phuket",
 ];
 
 
