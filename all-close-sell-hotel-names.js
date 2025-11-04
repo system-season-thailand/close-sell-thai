@@ -53,6 +53,7 @@ const closeSellHotelNames = [
     "Sugar Marina SURF Phuket",
     "Thaya Hotel Bangkok",
     "The Berkeley Pratunam",
+    "Siam At Siam Design Bangkok",
 ];
 
 
