@@ -54,7 +54,7 @@ const closeSellHotelNames = [
     "Thaya Hotel Bangkok",
     "The Berkeley Pratunam",
     "Siam At Siam Design Bangkok",
-    "Seabed Grand Hotel Phuket",
+    "Seabed Grand Phuket",
     "Radisson Red Phuket",
 ];
 
