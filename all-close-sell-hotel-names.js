@@ -57,6 +57,8 @@ const closeSellHotelNames = [
     "Seabed Grand Phuket",
     "Radisson Red Phuket",
     "Pamookkoo Resort",
+    "Phuket Orchid Resort",
+    "Avani Pattaya Resort",
 ];
 
 
