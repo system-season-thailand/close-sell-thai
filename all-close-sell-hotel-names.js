@@ -59,6 +59,7 @@ const closeSellHotelNames = [
     "Pamookkoo Resort",
     "Phuket Orchid Resort",
     "Avani Pattaya Resort",
+    "Hotel Clover Phuket",
 ];
 
 
