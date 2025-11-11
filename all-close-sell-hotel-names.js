@@ -63,6 +63,7 @@ const closeSellHotelNames = [
     "Arun Khiri Chiang Mai",
     "Ban Sainai Resort Krabi",
     "Jasmine Resort Bangkok",
+    "Pipa Bangkok Sukhumvit 11",
 
 
 
