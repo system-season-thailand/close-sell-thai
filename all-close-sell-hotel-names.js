@@ -62,6 +62,12 @@ const closeSellHotelNames = [
     "Hotel Clover Phuket",
     "Arun Khiri Chiang Mai",
     "Ban Sainai Resort Krabi",
+    "Jasmine Resort Bangkok",
+
+
+
+
+    "Jasmine 59 Hotel",
 ];
 
 
