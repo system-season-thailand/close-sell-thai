@@ -65,6 +65,7 @@ const closeSellHotelNames = [
     "Jasmine Resort Bangkok",
     "Pipa Bangkok Sukhumvit 11",
     "Tribe Phuket Patong",
+    "My Beach Resort Phuket",
 
 
 
