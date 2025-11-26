@@ -67,6 +67,10 @@ const closeSellHotelNames = [
     "Tribe Phuket Patong",
     "My Beach Resort Phuket",
     "Oakwood Studios Sukhumvit",
+    "Splash Beach Resort",
+    "Grande Centre Point Ratchadamri",
+    "Andaman Beach Hotel Phuket",
+    "The Aim Patong",
 
 
 
