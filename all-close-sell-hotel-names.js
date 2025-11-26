@@ -66,6 +66,7 @@ const closeSellHotelNames = [
     "Pipa Bangkok Sukhumvit 11",
     "Tribe Phuket Patong",
     "My Beach Resort Phuket",
+    "Oakwood Studios Sukhumvit",
 
 
 
