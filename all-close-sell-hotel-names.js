@@ -71,6 +71,7 @@ const closeSellHotelNames = [
     "Grande Centre Point Ratchadamri",
     "Andaman Beach Hotel Phuket",
     "The Aim Patong",
+    "Oakwood Sukhumvit Thonglor",
 
 
 
