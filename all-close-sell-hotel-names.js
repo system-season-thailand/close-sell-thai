@@ -72,6 +72,7 @@ const closeSellHotelNames = [
     "Andaman Beach Hotel Phuket",
     "The Aim Patong",
     "Oakwood Sukhumvit Thonglor",
+    "Sunsuri Phuket",
 
 
 
