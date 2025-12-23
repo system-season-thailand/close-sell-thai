@@ -73,6 +73,10 @@ const closeSellHotelNames = [
     "The Aim Patong",
     "Oakwood Sukhumvit Thonglor",
     "Sunsuri Phuket",
+    "Chanalai Garden Resort",
+    "Chanalai Flora Resort",
+    "Chanalai Romantica Resort",
+    "Jasmine Grande Residence",
 
 
 
