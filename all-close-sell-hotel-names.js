@@ -77,6 +77,7 @@ const closeSellHotelNames = [
     "Chanalai Flora Resort",
     "Chanalai Romantica Resort",
     "Jasmine Grande Residence",
+    "La Green Hotel Residence",
 
 
 
