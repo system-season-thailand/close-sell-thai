@@ -78,6 +78,7 @@ const closeSellHotelNames = [
     "Chanalai Romantica Resort",
     "Jasmine Grande Residence",
     "La Green Hotel Residence",
+    "Msocial Hotel Phuket",
 
 
 
