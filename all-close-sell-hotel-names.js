@@ -79,6 +79,7 @@ const closeSellHotelNames = [
     "Jasmine Grande Residence",
     "La Green Hotel Residence",
     "Msocial Hotel Phuket",
+    "Mercure Bangkok Siam",
 
 
 
