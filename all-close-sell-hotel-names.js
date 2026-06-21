@@ -80,11 +80,12 @@ const closeSellHotelNames = [
     "La Green Hotel Residence",
     "Msocial Hotel Phuket",
     "Mercure Bangkok Siam",
-
-
-
-
     "Jasmine 59 Hotel",
+    "Seekers Finders Rama IV Hotel",
+    "NH Bangkok Boulevard",
+    "InterContinental Bangkok Sukhumvit",
+    "Sofitel Bangkok Sukhumvit",
+    "Baba Beach Club Natai",
 ];
 
 
