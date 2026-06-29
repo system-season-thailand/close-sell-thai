@@ -86,6 +86,18 @@ const closeSellHotelNames = [
     "InterContinental Bangkok Sukhumvit",
     "Sofitel Bangkok Sukhumvit",
     "Baba Beach Club Natai",
+
+
+
+
+
+    "Novotel Bangkok Sukhumvit 4",
+    "Amari Bangkok",
+    "Hyatt Regency Bangkok Airport",
+    "Woraburi Phuket Resort",
+    "Dewa Phuket Resort",
+    "The Royal Paradise Hotel",
+    "Andamantra Resort Phuket",
 ];
 
 
