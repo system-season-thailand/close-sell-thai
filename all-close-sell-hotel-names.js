@@ -98,6 +98,9 @@ const closeSellHotelNames = [
     "Dewa Phuket Resort",
     "The Royal Paradise Hotel",
     "Andamantra Resort Phuket",
+    "IndoChine Resort Phuket",
+    "Homm Bliss Southbeach Patong",
+    "Phuket Marriott Nai Yang Beach",
 ];
 
 
