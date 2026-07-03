@@ -101,6 +101,13 @@ const closeSellHotelNames = [
     "IndoChine Resort Phuket",
     "Homm Bliss Southbeach Patong",
     "Phuket Marriott Nai Yang Beach",
+    "Boutique Resort Villa Phuket",
+    "Tantawan Villa Resort Phuket",
+    "Fisherman Way Beach Villa",
+    "Aonang Buri Resort Krabi",
+    "AVA SEA Resort Krabi",
+    "Blue Tara Hotel Krabi",
+    "Lani Chiang Mai Hotel",
 ];
 
 
