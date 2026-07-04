@@ -108,6 +108,12 @@ const closeSellHotelNames = [
     "AVA SEA Resort Krabi",
     "Blue Tara Hotel Krabi",
     "Lani Chiang Mai Hotel",
+    "Novotel Chiang Mai",
+    "Ping Pura Riverside Resort",
+    "The Stay Chaweng Resort",
+    "Baan Chaweng Beach Resort",
+    "Banana Fan Sea Resort",
+    "Fair House Villas",
 ];
 
 
