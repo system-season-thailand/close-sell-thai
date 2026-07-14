@@ -1,5 +1,4 @@
 
-
 // --- Hotel Names Array (replace/add as needed) ---
 const closeSellHotelNames = [
     "Amari Phuket",
@@ -115,6 +114,8 @@ const closeSellHotelNames = [
     "Baan Chaweng Beach Resort",
     "Banana Fan Sea Resort",
     "Fair House Villas",
+    "Aira Bangkok Sukhumvit 11",
+    "Chanalai Hillside Resort",
 ];
 
 
