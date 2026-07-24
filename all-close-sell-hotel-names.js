@@ -116,6 +116,10 @@ const closeSellHotelNames = [
     "Fair House Villas",
     "Aira Bangkok Sukhumvit 11",
     "Chanalai Hillside Resort",
+    "Grande Centre Point Prestige",
+    "The Rich Grand Sukhumvit",
+    "The Rich Residence Sukhumvit",
+    "Novotel Bangkok Siam",
 ];
 
 
