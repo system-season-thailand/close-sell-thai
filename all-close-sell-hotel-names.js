@@ -118,7 +118,7 @@ const closeSellHotelNames = [
     "Chanalai Hillside Resort",
     "Grande Centre Point Prestige",
     "The Rich Grand Sukhumvit",
-    "The Rich Residence Sukhumvit",
+    "The Rich Residence Sukhumvit Nana",
     "Novotel Bangkok Siam",
 ];
 
