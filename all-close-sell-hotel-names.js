@@ -121,6 +121,7 @@ const closeSellHotelNames = [
     "The Rich Residence Sukhumvit Nana",
     "Novotel Bangkok Siam",
     "Amatara Welleisure Resort",
+    "Andara Resort Villas Phuket",
 ];
 
 
