@@ -122,6 +122,10 @@ const closeSellHotelNames = [
     "Novotel Bangkok Siam",
     "Amatara Welleisure Resort",
     "Andara Resort Villas Phuket",
+    "The Marin Phuket Kamala",
+    "Panviman Chiang Mai Resort",
+    "The Salil Hotel Riverside Bangkok",
+    "Centre Point Sukhumvit 10",
 ];
 
 
