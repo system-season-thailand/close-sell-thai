@@ -126,6 +126,9 @@ const closeSellHotelNames = [
     "Panviman Chiang Mai Resort",
     "The Salil Hotel Riverside Bangkok",
     "Centre Point Sukhumvit 10",
+    "One One Bangkok",
+    "Centre Point Sukhumvit Thong Lo",
+    "Solitaire Bangkok",
 ];
 
 
