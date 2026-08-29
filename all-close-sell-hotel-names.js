@@ -129,6 +129,8 @@ const closeSellHotelNames = [
     "One One Bangkok",
     "Centre Point Sukhumvit Thong Lo",
     "Solitaire Bangkok",
+    "Ramada Wyndham Bangkok 87",
+    "Wyndham Garden Bangkok 42",
 ];
 
 
