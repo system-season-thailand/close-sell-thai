@@ -181,6 +181,7 @@ const closeSellHotelNames = [
     "Hotel Portofino",
     "Hotel MYS Khao Yai",
     "InterContinental Khao Yai Resort",
+    "Travelodge Sukhumvit 11",
 ];
 
 
